@@ -52,10 +52,10 @@ jobs:
           context: .
           file: ./Dockerfile.arm64
           platforms: linux/amd64
-          # push: ${{ github.event_name != 'pull_request' }}
+          push: true #${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.prep.outputs.tags }}
           registry: docker.pkg.github.com
-          repository: damacus/pms-docker/pms-docker
-          tag_with_ref: true
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          # repository: damacus/pms-docker/pms-docker
+          # tag_with_ref: true
+          # username: ${{ github.actor }}
+          # password: ${{ secrets.GITHUB_TOKEN }}
